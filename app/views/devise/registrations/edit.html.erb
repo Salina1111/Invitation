@@ -19,6 +19,14 @@
   </div>
 
   <div class="field">
+    <%= f.label :Currentpassword %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -57,7 +65,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Update" %>
   </div>
 <% end %>
 

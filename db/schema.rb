@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_12_120941) do
+ActiveRecord::Schema.define(version: 2018_07_13_114529) do
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_07_12_120941) do
     t.integer "roll_number"
     t.string "batch"
     t.string "faculty"
-    t.integer "phone_number"
+    t.integer "phone_number", limit: 8
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
